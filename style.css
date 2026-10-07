@@ -1,0 +1,366 @@
+/* ============================================================
+   PLIK STYLÓW CSS - ZADANIE HTML + CSS
+   ============================================================
+   
+   INSTRUKCJE:
+   - Style przypisuj za pomocą klas (class) oraz selektorów elementów.
+   - Nie używaj atrybutów style="" bezpośrednio w HTML (inline styles).
+   - Uzupełnij poniższe reguły stylów zgodnie z komentarzami.
+   
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   RESET / PODSTAWOWE USTAWIENIA
+   ------------------------------------------------------------ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;    
+    color: yellow;
+    line-height: auto;
+    /* 
+        STYL BODY
+        - Ustaw font-family (np. Arial, sans-serif)
+        - Ustaw kolor tła i tekstu
+        - Ustaw line-height dla lepszej czytelności
+    */
+    
+}
+
+
+/* ------------------------------------------------------------
+   HEADER
+   ------------------------------------------------------------ */
+header {
+    background-color:rgba(80, 1, 80, 0.404);
+    padding: 10px;
+    text-align: center;
+    border-bottom: auto ;
+    /* 
+        STYL HEADER
+        - Ustaw tło (background-color)
+        - Ustaw padding
+        - Ustaw tekst na środku lub wyrównaj
+        - Możesz dodać border-bottom
+    */
+    
+}
+
+header h1 {
+    color: yellow;
+    margin: auto;
+    padding: 10px;
+    font-size: 40px;
+    /* Styl nagłówka h1 w headerze */
+    
+}
+
+
+/* ------------------------------------------------------------
+   NAV
+   ------------------------------------------------------------ */
+nav {
+    background-color: black;
+    padding: auto;
+    /* 
+        STYL NAV
+        - Tło, padding
+    */
+    
+}
+
+nav ul {
+    list-style: none;
+    display:flex;
+    gap: 15px;
+    /* 
+        Lista w nawigacji
+        - list-style: none;
+        - display: flex; (lub inline)
+        - gap między elementami
+    */
+    
+}
+
+nav a {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(165, 3, 165, 0.404);
+    transition: color 0.3s ease;
+    /* Style linków w nav */
+}
+nav a:hover {
+    color: yellow;
+}
+
+
+/* ------------------------------------------------------------
+   CONTAINER (main + aside)
+   ------------------------------------------------------------ */
+.container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    /* 
+        KONTENER GŁÓWNY
+        - Użyj display: flex; lub display: grid;
+        - Aby main i aside były obok siebie
+        - max-width i margin: 0 auto; (wyśrodkowanie)
+        - padding
+    */
+    
+}
+
+main {
+    flex: 1;
+    padding: 10px;
+
+    /* 
+        STYL MAIN
+        - flex: 1; lub width (np. 70%)
+        - padding
+    */
+    
+}
+
+aside {
+    width: 250px;
+    background-color:rgba(80, 1, 80, 0.404) ;
+    padding: 10px;
+    border: solid 1px yellow; 
+    /* 
+        STYL ASIDE
+        - width (np. 30% lub 250px)
+        - background-color
+        - padding
+        - border (opcjonalnie)
+    */
+    
+}
+
+
+/* ------------------------------------------------------------
+   SEKCJE W MAIN
+   ------------------------------------------------------------ */
+section {
+    margin-bottom: 10px;
+    padding: 10px;
+    /* 
+        STYL SEKCJI
+        - margin-bottom
+        - padding
+    */
+    
+}
+
+section h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color: purple;
+    margin: auto;
+    padding: 5px;
+    /* Styl nagłówków sekcji */
+    
+}
+
+
+/* ------------------------------------------------------------
+   LISTY
+   ------------------------------------------------------------ */
+/* 
+    LISTA NUMEROWANA (ol)
+    - Dodaj style dla ol i li
+    - Możesz zmienić kolor numerów, odstępy itp.
+*/
+ol {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+ol li {
+    margin-bottom: 8px;
+    color: yellow;
+    font-weight: 500;
+}
+
+/* 
+    LISTA PUNKTOWANA (ul)
+    - Dodaj style dla ul i li
+    - Możesz zmienić rodzaj punktów (list-style-type)
+*/
+ul {
+    margin: 15px 0;
+    padding-left: 25px;
+    list-style-type: square;
+}
+
+ul li {
+    margin-bottom: 8px;
+    color: yellow;
+}
+
+
+/* ------------------------------------------------------------
+   TABELA
+   ------------------------------------------------------------ */
+/* 
+    TABELA
+    - Nadaj klasę tabeli w HTML (np. .tabela-danych)
+    - Ustaw border-collapse: collapse;
+    - Style dla th i td (padding, border, text-align)
+    - Możesz dodać tło dla thead
+*/
+.tabela-danych {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.tabela-danych th,
+.tabela-danych td {
+    padding: 12px 15px;
+    border: 1px solid yellow;
+    text-align: left;
+}
+
+.tabela-danych thead {
+    background-color: rgba(80, 1, 80, 0.404);;
+    color: yellow;
+}
+
+.tabela-danych tbody tr:nth-child(even) {
+    /* Opcjonalnie: zebra stripes */
+    background-color: rgba(80, 1, 80, 0.404); ;
+}
+
+
+/* ------------------------------------------------------------
+   OBRAZ
+   ------------------------------------------------------------ */
+/* 
+    OBRAZ
+    - Nadaj klasę obrazowi (np. .obraz-glowny)
+    - max-width: 100%;
+    - border-radius (opcjonalnie)
+    - display: block; margin: auto; (wyśrodkowanie)
+*/
+.obraz-glowny {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block; 
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+/* ------------------------------------------------------------
+   ELEMENTY BLOKOWE DIV (z margin, padding, border)
+   ------------------------------------------------------------ */
+/* 
+    KLASY DLA DIVÓW
+    Każdy box musi mieć:
+    - margin
+    - padding
+    - border
+    
+    Przykłady klas poniżej - uzupełnij wartości.
+*/
+
+.box {
+    /* Wspólne style dla wszystkich boxów */
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.box-primary {
+    /* 
+        Box główny
+        - border: np. 2px solid #3498db;
+        - padding: np. 15px;
+        - margin: np. 10px 0;
+        - background-color
+    */
+    border: 2px solid yellow;
+    padding: 20px;
+    margin: 15px 0;
+    background-color: rgba(80, 1, 80, 0.404);;
+    color: yellow;
+}
+
+.box-secondary {
+    /* 
+        Box dodatkowy
+        - inny kolor borderu
+        - inny padding / margin
+    */
+    border: 2px solid yellow;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: rgba(80, 1, 80, 0.404);
+    color: yellow;
+}
+
+.box-accent {
+    /* 
+        Box wyróżniony
+        - mocniejszy border lub inny styl
+        - możesz dodać border-radius
+    */
+    border: 2px dashed #e67e22;
+    padding: 25px;
+    margin: 20px 0;
+    background-color: #fdf5e6;
+    border-radius: 12px;
+}
+
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+footer {
+    /* 
+        STYL FOOTER
+        - tło
+        - padding
+        - text-align: center;
+        - margin-top
+    */
+    background-color: rgba(80, 1, 80, 0.404);
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 4px solid yellow;
+}
+
+footer p {
+    color: yellow;
+    margin: 0;
+    font-size: 15px
+    ;
+}
+
+
+/* ------------------------------------------------------------
+   DODATKOWE STYLE (opcjonalne)
+   ------------------------------------------------------------ */
+/* 
+    Po dodaniu Font Awesome możesz stylować ikony, np.:
+    .fa-solid, .fa-brands {
+        margin-right: 8px;
+        color: #e74c3c;
+    }
+*/ 
+.fa-solid, .fa-brands {
+    margin-right: 8px;
+    color: #ffff00;
+}

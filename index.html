@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie HTML + CSS - Szablon strony</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-user"></i>
+    <i class="fa-brands fa-facebook"></i>
+    
+</head>
+<body>
+
+    <!-- 
+        STRUKTURA SEMANTYCZNA STRONY
+        Uzupełnij poniższe sekcje zgodnie z instrukcjami.
+        Strona musi zawierać elementy: header, nav (opcjonalnie), main, aside, footer.
+    -->
+
+    <header id="home">
+            <h1>Naglowek</h1>
+            <p>Motto strony</p>
+            <i class="fa-solid fa-home"></i>
+    </header>
+
+    <nav>
+        <ul>
+        <li><a href="#home">Tytul</a></li>
+        <li><a href="#glówna">Główna</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <ul>
+            <li><a href="https://www.google.com">Google</a></li>
+            <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- 
+            GŁÓWNA CZĘŚĆ STRONY
+            Użyj flexboxa lub gridu w CSS, aby ułożyć main i aside obok siebie.
+        -->
+
+        <main id="glówna">
+            <!-- 
+                MAIN - główna treść
+                Tutaj umieść:
+                1. Listę numerowaną
+                2. Listę punktowaną
+                3. Tabelę
+                4. Obraz - możesz użyć dowolnego obrazu z internetu (np. placehold.co lub picsum.photos)
+                5. Elementy blokowe <div> z klasami do stylowania (margin, padding, border)
+            -->
+
+            <section>
+                <h2>Listy</h2>
+                <ol>
+                    <li>Element 1</li>
+                    <li>Element 2</li>
+                    <li>Element 3</li>
+                </ol>
+                <ul>
+                    <li>Element 1</li>
+                    <li>Element 2</li>
+                    <li>Element 3</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Tabela</h2>
+                <table class="tabela-danych">
+                    <thead>
+                        <tr>
+                            <th>Nagłówek 1</th>
+                            <th>Nagłówek 2</th>
+                            <th>Nagłówek 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dane 1</td>
+                            <td>Dane 2</td>
+                            <td>Dane 3</td>
+                        </tr>
+                        <tr>
+                            <td>Dane 4</td>
+                            <td>Dane 5</td>
+                            <td>Dane 6</td>
+                        </tr>
+                        <tr>
+                            <td>Dane 7</td>
+                            <td>Dane 8</td>
+                            <td>Dane 9</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 
+                    TABELA
+                    Utwórz tabelę z:
+                    - nagłówkiem (<thead> z <th>)
+                    - ciałem (<tbody> z <tr> i <td>)
+                    - przynajmniej 3 kolumnami i 3 wierszami danych
+                    Nadaj tabeli klasę, np. class="tabela-danych"
+                -->
+            </section>
+
+            <section >
+                <h2>Obraz</h2>
+                <img src="images.jfif" alt="dziecko" width="300" height="250">
+                <!-- 
+                    OBRAZ
+                    Wstaw element <img> z atrybutami:
+                    - src (adres obrazu, np. https://picsum.photos/400/250)
+                    - alt (opis alternatywny)
+                    - opcjonalnie width / height lub klasa do stylowania
+                -->
+                
+            </section>
+
+            <section>
+                <h2>Elementy blokowe (div)</h2>
+                <div class="box-primary">
+                
+                <p>To jest pierwszy div</p>
+                <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="box-secondary">
+                <p>To jest drugi div</p>
+                <i class="fa-solid fa-heart"></i>
+                </div>
+                <!-- 
+                    ELEMENTY BLOKOWE DIV
+                    Utwórz kilka elementów <div> z różnymi klasami.
+                    Każdy div powinien mieć w CSS:
+                    - margin
+                    - padding
+                    - border
+                    
+                    Przykładowe klasy do użycia:
+                    - class="box box-primary"
+                    - class="box box-secondary"
+                    - class="box box-accent"
+                    
+                    W środku divów umieść tekst lub inne elementy.
+                -->
+                
+            </section>
+        </main>
+
+        <aside>
+            <h2>Panel boczny</h2>
+            <p>Tu można umieścić informacje dodatkowe</p>
+            <i class="fa-solid fa-moon"></i>
+            <!-- 
+                ASIDE - panel boczny
+                - Dodaj nagłówek (h2 lub h3)
+                - Możesz umieścić listę linków, informacje dodatkowe, lub ikony (po dodaniu Font Awesome)
+            -->   
+        </aside>
+    </div>
+
+    <footer id="contact">
+        <!-- 
+            FOOTER
+            - Dodaj informacje o autorze / copyright
+            - Możesz dodać linki społecznościowe (po dodaniu Font Awesome - ikony)
+        -->
+        <p>Vadim Serhieiev 2026 rok 2tp Zwierzyniec</p>
+        <a href="https://zsdios.pl/"><i class="fa-solid fa-school"></i></a>
+    </footer>
+
+</body>
+</html>
